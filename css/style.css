@@ -1,0 +1,234 @@
+/************************
+    Var Colors
+***********************/
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/************************
+    Body Page
+***********************/
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+/************************
+    Container
+***********************/
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/************************
+    Card
+***********************/
+.card{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+/************************
+    Main Card
+***********************/
+
+.main-card{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    margin: 0 auto;
+}
+
+/************************
+    Card One
+***********************/
+
+.card-one{
+    background-color: var(--Bright-orange);
+    height: 80%;
+    width: 30%;
+    border-bottom-left-radius: 0.6em;
+    border-top-left-radius: 0.6em;
+    padding: 0px 10px;
+    flex-shrink: 2;
+}
+
+/************************
+    Card Two
+***********************/
+
+.card-two{
+    background-color: var(--Dark-cyan);
+    height: 80%;
+    width: 30%;
+}
+
+/************************
+    Card Three
+***********************/
+
+.card-three{
+    background-color: var(--Very-dark-cyan);
+    height: 80%;
+    width: 30%;
+    border-bottom-right-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+}
+
+/************************
+    Image Header
+***********************/
+
+.img-header{
+    margin-left: 3em;
+    margin-top: 2.5em;
+}
+
+/************************
+    Card Title
+***********************/
+
+.card-title{
+    margin-left: 1.6em;
+    margin-top: 1.5em;
+    color: var(--Very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2em;
+    
+}
+
+/************************
+    Card Body
+***********************/
+
+.card-body{
+    color: var(--Transparent-white);
+    text-align: left;
+    padding: 1em;
+    margin-left: 1.5em;
+    line-height: 1.6;
+    width: 290px;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/************************
+    Card Footer
+***********************/
+
+.card-footer{
+    margin-left: 3em;
+    margin-top: 2em;
+
+}
+
+/************************
+    Buttons
+***********************/
+
+.button-one{
+    border-radius: 2em;
+    padding: 1em 2.5em;
+    background-color: var(--Very-light-gray);
+    border-style: none;
+    color: var(--Bright-orange);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.button-two{
+    border-radius: 2em;
+    padding: 1em 2.5em;
+    background-color: var(--Very-light-gray);
+    border-style: none;
+    color: var(--Dark-cyan);
+    cursor: pointer;
+}
+
+.button-three{
+    border-radius: 2em;
+    padding: 1em 2.5em;
+    background-color: var(--Very-light-gray);
+    border-style: none;
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+
+.button-one:active{
+    opacity: .8;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.button-two:active{
+    opacity: .8;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.button-three:active{
+    opacity: .8;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+
+/************************
+    Media Queries
+***********************/
+
+@media (max-width:375px){
+    .main-card{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
+
+    .card-one, .card-two, .card-three{
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .card-one{
+        border-top-right-radius: 0.6em;
+        border-bottom-left-radius: 0;
+    }
+
+    .card-three{
+        border-bottom-left-radius: 0.6em;
+        border-top-right-radius: 0;
+    }
+
+    .card-footer{
+        margin-bottom: 2em;
+    }
+}
